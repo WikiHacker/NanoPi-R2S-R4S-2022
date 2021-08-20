@@ -62,7 +62,7 @@ svn co https://github.com/WikiHacker/openwrt-packages/trunk/smartdns
 svn co https://github.com/WikiHacker/openwrt-packages/trunk/luci-app-smartdns
 
 # Add luci-app-aliddns
-svn co https://github.com/281677160/openwrt-package/trunk/luci-app-aliddns
+svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-aliddns
 
 # Add subconverter
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
@@ -75,12 +75,13 @@ svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/pa
 svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl88x2bu
 
 # Add dafeiji
-svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/lean/luci-app-cpufreq
-svn co https://github.com/281677160/openwrt-package/trunk/cpulimit
-svn co https://github.com/281677160/openwrt-package/trunk/luci-app-cpulimit
+#svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/lean/luci-app-cpufreq
+svn co https://github.com/281677160/openwrt-package/trunk/feeds/packages/utils/cpulimit
+svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-cpulimit
 
 # Add luci-udptools
-git clone --depth=1 https://github.com/zcy85611/openwrt-luci-kcp-udp
+#git clone --depth=1 https://github.com/zcy85611/openwrt-luci-kcp-udp
+git clone --depth=1 https://github.com/hongwenjun/openwrt-luci-kcp-udp.git
 
 # Add luci-app-wireguard
 svn co https://github.com/openwrt/luci/trunk/applications/luci-app-wireguard
@@ -106,7 +107,8 @@ popd
 
 # Add Pandownload
 pushd package/lean
-svn co https://github.com/immortalwrt/immortalwrt/trunk/package/lean/pandownload-fake-server
+#svn co https://github.com/immortalwrt/immortalwrt/trunk/package/lean/pandownload-fake-server
+svn co https://github.com/immortalwrt/packages/trunk/net/pandownload-fake-server
 popd
 
 # Mod zzz-default-settings
