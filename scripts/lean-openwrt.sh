@@ -156,6 +156,9 @@ sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generat
 sed -i '/uci commit system/i\uci set system.@system[0].hostname='MocoWrt'' package/lean/default-settings/files/zzz-default-settings
 sed -i "s/OpenWrt /MocoWrt build $(TZ=UTC-8 date "+%Y.%m.%d") @ MocoWrt /g" package/lean/default-settings/files/zzz-default-settings
 
+#Test kernel 5.15
+sed -i 's/5.15/5.4/g' target/linux/rockchip/Makefile
+
 # Custom configs
 git am $GITHUB_WORKSPACE/patches/lean/*.patch
 echo -e " MocoWrt built on "$(date +%Y.%m.%d)"\n -----------------------------------------------------" >> package/base-files/files/etc/banner
