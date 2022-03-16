@@ -5,6 +5,9 @@ pushd package/lean
 git clone --depth=1 https://github.com/fw876/helloworld
 popd
 
+rm -rf ./package/kernel/linux/modules/fs.mk
+wget -P ./package/kernel/linux/modules/ https://raw.githubusercontent.com/LPDDR6-10000MHz/lede/master/package/kernel/linux/modules/fs.mk
+
 # Clone community packages to package/community
 mkdir package/community
 pushd package/community
