@@ -6,10 +6,10 @@ git clone --depth=1 https://github.com/fw876/helloworld
 popd
 
 # Testing 
-#rm -rf ./target/linux/rockchip/armv8/base-files/etc/hotplug.d
-#rm -rf ./package/kernel/linux/modules/fs.mk
-#wget -P ./package/kernel/linux/modules/ https://raw.githubusercontent.com/LPDDR6-10000MHz/lede/master/package/kernel/linux/modules/fs.mk
-#rm -rf ./target/linux/generic/pending-5.10/701-net-ethernet-mtk_eth_soc-add-ipv6-flow-offloading-support.patch
+rm -rf ./target/linux/rockchip/armv8/base-files/etc/hotplug.d
+rm -rf ./package/kernel/linux/modules/fs.mk
+wget -P ./package/kernel/linux/modules/ https://raw.githubusercontent.com/LPDDR6-10000MHz/lede/master/package/kernel/linux/modules/fs.mk
+rm -rf ./target/linux/generic/pending-5.10/701-net-ethernet-mtk_eth_soc-add-ipv6-flow-offloading-support.patch
 
 # Clone community packages to package/community
 mkdir package/community
