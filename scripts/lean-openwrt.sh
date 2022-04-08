@@ -83,11 +83,11 @@ svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/application
 git clone --depth=1 https://github.com/tindy2013/openwrt-subconverter
 
 # Add extra wireless drivers
-#svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8812au-ac
-#svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8821cu
-#svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8188eu
-#svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8192du
-#svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl88x2bu
+svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8812au-ac
+svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8821cu
+svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8188eu
+svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl8192du
+svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-18.06-k5.4/package/kernel/rtl88x2bu
 
 # Add dafeiji
 #svn co https://github.com/immortalwrt/immortalwrt/branches/master/package/lean/luci-app-cpufreq
@@ -169,7 +169,7 @@ sed -i '/uci commit system/i\uci set system.@system[0].hostname='MocoWrt'' packa
 sed -i "s/OpenWrt /MocoWrt build $(TZ=UTC-8 date "+%Y.%m.%d") @ MocoWrt /g" package/lean/default-settings/files/zzz-default-settings
 
 #Test kernel 5.15
-sed -i 's/5.15/5.10/g' target/linux/rockchip/Makefile
+#sed -i 's/5.15/5.10/g' target/linux/rockchip/Makefile
 
 # Custom configs
 git am $GITHUB_WORKSPACE/patches/lean/*.patch
