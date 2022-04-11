@@ -20,7 +20,8 @@ on:
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
-  CONFIG_FILE: config/lean/rockchip/rockchip-lean-Docker.config
+  #CONFIG_FILE: config/lean/rockchip/rockchip-lean-Docker.config
+  CONFIG_FILE: config/lean/rockchip/Docker.config
   DIY_SH: scripts/lean-openwrt.sh
   IPV6MOD_IN_FIRMWARE: true
   KMODS_IN_FIRMWARE: true
