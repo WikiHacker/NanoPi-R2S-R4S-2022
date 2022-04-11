@@ -110,15 +110,11 @@ popd
 #sed -i '/Load Average/i\\t\t<tr><td width="33%"><%:CPU Temperature%></td><td><%=luci.sys.exec("cut -c1-2 /sys/class/thermal/thermal_zone0/temp")%><span>&#8451;</span></td></tr>' index.htm
 #sed -i '/Load Average/i\\t\t<tr><td width="33%"><%:欢迎订阅 Youbube 频道%></td><td><a href="https://www.youtube.com"><%:YOURENAME%></a></td></tr>' index.htm
 
-# Add luci-app-ddnsto
-pushd package/network/services
-git clone --depth=1 https://github.com/linkease/ddnsto-openwrt
-popd
-
-# Add luci-app-linkease
-pushd package/network/services
-git clone --depth=1 https://github.com/linkease/linkease-openwrt
-popd
+# Add ddnsto & linkease
+svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-ddnsto
+svn co https://github.com/linkease/nas-packages-luci/trunk/luci/luci-app-linkease
+svn co https://github.com/linkease/nas-packages/trunk/network/services/ddnsto
+svn co https://github.com/linkease/nas-packages/trunk/network/services/linkease
 
 # Add Pandownload
 pushd package/lean
