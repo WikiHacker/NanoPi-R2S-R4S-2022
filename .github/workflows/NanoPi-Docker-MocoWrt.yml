@@ -122,13 +122,11 @@ jobs:
         run: |
           cd $OPENWRTROOT
           echo -e "$(nproc) thread compile"
-          make tools/compile -j$(nproc) || make tools/compile -j1 V=s
-          make toolchain/compile -j$(nproc) || make toolchain/compile -j1 V=s
-          #make target/compile -j$(nproc) || make target/compile -j1 V=s IGNORE_ERRORS=1
-          make target/compile -j$(nproc) IGNORE_ERRORS="m n" BUILD_LOG=1 || \
-          yes n | make target/compile -j1 V=s IGNORE_ERRORS=1
+          make tools/compile -j$(nproc) || make tools/compile -j72
+          make toolchain/compile -j$(nproc) || make toolchain/compile -j72
+          #make target/compile -j$(nproc) || make target/compile -j72 IGNORE_ERRORS=1
           make diffconfig
-          make package/compile -j$(nproc) IGNORE_ERRORS=1 || make package/compile -j1 V=s IGNORE_ERRORS=1
+          make package/compile -j$(nproc) IGNORE_ERRORS=1 || make package/compile -j72 IGNORE_ERRORS=1
           # 这里有个编译报错，必须先clean 一下。 详见 ERROR: package/lean/libcryptopp failed to build.
           # make clean
           # make package/compile -j$(nproc) IGNORE_ERRORS=1 || make package/compile -j1 V=s IGNORE_ERRORS=1
