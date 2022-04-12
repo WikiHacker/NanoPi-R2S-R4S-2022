@@ -12,7 +12,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   CONFIG_FILE: config/lean/rockchip/Docker.config
-  DIY_SH: scripts/lean.sh
+  DIY_SH: scripts/lean-openwrt.sh
   KMODS_IN_FIRMWARE: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
