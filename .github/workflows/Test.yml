@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build NanoPi R2S/R4S Docker MocoWrt
+name: MocoWrt - Test
 
 on:
   repository_dispatch:
